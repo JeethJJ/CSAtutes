@@ -1,0 +1,134 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://server/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://server/">
+
+<xs:element name="addNumberToServer" type="tns:addNumberToServer"/>
+
+<xs:element name="addNumberToServerResponse" type="tns:addNumberToServerResponse"/>
+
+<xs:element name="addSampleToServer" type="tns:addSampleToServer"/>
+
+<xs:element name="addSampleToServerResponse" type="tns:addSampleToServerResponse"/>
+
+<xs:element name="findAllSamplesWithTemperatureAbove" type="tns:findAllSamplesWithTemperatureAbove"/>
+
+<xs:element name="findAllSamplesWithTemperatureAboveResponse" type="tns:findAllSamplesWithTemperatureAboveResponse"/>
+
+<xs:element name="findLargestNumberInServer" type="tns:findLargestNumberInServer"/>
+
+<xs:element name="findLargestNumberInServerResponse" type="tns:findLargestNumberInServerResponse"/>
+
+<xs:element name="findSampleWithHighestTemperature" type="tns:findSampleWithHighestTemperature"/>
+
+<xs:element name="findSampleWithHighestTemperatureResponse" type="tns:findSampleWithHighestTemperatureResponse"/>
+
+<xs:element name="getLongestString" type="tns:getLongestString"/>
+
+<xs:element name="getLongestStringResponse" type="tns:getLongestStringResponse"/>
+
+<xs:element name="getLongestStringWithException" type="tns:getLongestStringWithException"/>
+
+<xs:element name="getLongestStringWithExceptionResponse" type="tns:getLongestStringWithExceptionResponse"/>
+
+<xs:element name="isConnected" type="tns:isConnected"/>
+
+<xs:element name="isConnectedResponse" type="tns:isConnectedResponse"/>
+
+<xs:complexType name="findSampleWithHighestTemperature">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findSampleWithHighestTemperatureResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sample" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="sample">
+<xs:sequence>
+<xs:element name="city" type="xs:string" minOccurs="0"/>
+<xs:element name="humidity" type="xs:double" minOccurs="0"/>
+<xs:element name="temperature" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="isConnected">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="isConnectedResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumberToServer">
+<xs:sequence>
+<xs:element name="n" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addNumberToServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLongestStringWithException">
+<xs:sequence>
+<xs:element name="s1" type="xs:string" minOccurs="0"/>
+<xs:element name="s2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLongestStringWithExceptionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSampleToServer">
+<xs:sequence>
+<xs:element name="arg0" type="tns:sample" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSampleToServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSamplesWithTemperatureAbove">
+<xs:sequence>
+<xs:element name="t" type="xs:double"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findAllSamplesWithTemperatureAboveResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:sample" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findLargestNumberInServer">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="findLargestNumberInServerResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:double" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLongestString">
+<xs:sequence>
+<xs:element name="s1" type="xs:string" minOccurs="0"/>
+<xs:element name="s2" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getLongestStringResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
